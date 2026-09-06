@@ -1,7 +1,7 @@
-===================================================================
+
 SUPPORT TICKET EXPORT — batch_2026-09-04.log
 Source: legacy-crm-api/v2/tickets/export (raw dump, unfiltered)
-===================================================================
+
 
 Ticket #10231 opened 2026-09-01 09:14 AM
 Customer: Aline Uwase
@@ -91,6 +91,6 @@ Setup guide link they were sent: https://docs.alueducation.com/guide/setup#step-
 Ops paged about the monitoring box again: http://192.168.1.42:8080/status
 Also got this in an email signature, not a link to follow up on:
   mailto:support@alueducation.com
-===================================================================
+
 END OF EXPORT
-===================================================================
+
