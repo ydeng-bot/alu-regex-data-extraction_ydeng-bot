@@ -2,7 +2,7 @@
 
 A regex-based tool for pulling structured data (emails, credit cards, phone
 numbers, URLs, hashtags, currency amounts) out of messy, real-world-style
-text, while treating that text as untrusted input rather than assuming it's
+text, while treating that text as untrusted input than assuming it's
 safe.
 
 
