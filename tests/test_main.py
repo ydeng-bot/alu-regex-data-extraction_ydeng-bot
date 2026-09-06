@@ -33,9 +33,9 @@ sys.path.insert(0, SRC_DIR)
 import main as m  # noqa: E402  (import after sys.path manipulation, by necessity)
 
 
-# ---------------------------------------------------------------------------
+# 
 # 1. EMAIL EXTRACTION & ALU CLASSIFICATION
-# ---------------------------------------------------------------------------
+# 
 class TestEmailExtraction(unittest.TestCase):
 
     def test_general_email_is_found(self):
